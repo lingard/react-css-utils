@@ -1,0 +1,27 @@
+@define-mixin utils-border-radius-setup $namespace {
+  .$(namespace)base {
+    border-radius: var(--borderRadiusBase);
+  }
+}
+
+:root {
+  @mixin utils-border-radius-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-border-radius-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-border-radius-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-border-radius-setup desk-;
+  }
+}

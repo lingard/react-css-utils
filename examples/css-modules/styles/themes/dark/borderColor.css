@@ -1,0 +1,34 @@
+@define-mixin utils-border-color-setup $namespace {
+  /**
+   * Inherit the ancestor's text color.
+   */
+  .$(namespace)inherit {
+    border-color: inherit !important;
+  }
+
+  .$(namespace)base {
+    border-color: var(--darkBorderColorBase);
+  }
+}
+
+:root {
+  @mixin utils-border-color-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-border-color-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-border-color-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-border-color-setup desk-;
+  }
+}

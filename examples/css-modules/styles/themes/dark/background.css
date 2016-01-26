@@ -1,0 +1,42 @@
+@define-mixin theme-dark-background-setup $namespace {
+  /**
+   * Inherit the ancestor's text color.
+   */
+  .$(namespace)inherit {
+    background: inherit !important;
+  }
+
+  .$(namespace)base {
+    background: var(--darkBackgroundBase);
+  }
+
+  .$(namespace)emphasized {
+    background: var(--darkBackgroundEmphasized);
+  }
+
+  .$(namespace)muted {
+    background: var(--darkBackgroundMuted);
+  }
+}
+
+:root {
+  @mixin theme-dark-background-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin theme-dark-background-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin theme-dark-background-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin theme-dark-background-setup desk-;
+  }
+}

@@ -1,0 +1,35 @@
+@define-mixin utils-border-setup $namespace {
+  .$(namespace)a-s { border-width: 1px; }
+  .$(namespace)y-s { border-width: 1px 0; }
+  .$(namespace)x-s { border-width: 0 1px; }
+  .$(namespace)l-s { border-width: 0 0 0 1px; }
+  .$(namespace)r-s { border-width: 0 1px 0 0; }
+  .$(namespace)t-s { border-width: 1px 0 0 0; }
+  .$(namespace)b-s { border-width: 0 0 1px 0; }
+
+  .$(namespace)solid { border-style: solid; }
+  .$(namespace)dotted { border-style: dotted; }
+  .$(namespace)dashed { border-style: dashed; }
+}
+
+:root {
+  @mixin utils-border-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-border-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-border-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-border-setup desk-;
+  }
+}
