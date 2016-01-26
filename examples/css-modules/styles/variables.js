@@ -101,6 +101,6 @@ module.exports = {
   easing: easing,
   breakpoints: breakpoints,
   borderRadius: borderRadius,
-  defaultTheme,
-  darkTheme
+  defaultTheme: defaultTheme,
+  darkTheme: darkTheme
 }
