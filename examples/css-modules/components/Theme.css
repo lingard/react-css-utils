@@ -1,7 +1,9 @@
 .default {
   color: var(--colorTextBase);
+  fill: var(--fillBase);
 }
 
 .dark {
   color: var(--darkColorTextBase);
+  fill: var(--darkFillBase);
 }

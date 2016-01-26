@@ -1,0 +1,74 @@
+@define-mixin utils-overflow-setup $namespace {
+
+  .$(namespace)hidden {
+    overflow: hidden;
+  }
+
+  .$(namespace)auto {
+    overflow: auto;
+  }
+
+  .$(namespace)scroll {
+    overflow: scroll;
+  }
+
+  .$(namespace)visible {
+    overflow: visible;
+  }
+
+  /* x overflow */
+  .$(namespace)x-hidden {
+    overflow-x: hidden;
+  }
+
+  .$(namespace)x-auto {
+    overflow-x: auto;
+  }
+
+  .$(namespace)x-scroll {
+    overflow-x: scroll;
+  }
+
+  .$(namespace)x-visible {
+    overflow-x: visible;
+  }
+
+  /* y overflow */
+  .$(namespace)y-hidden {
+    overflow-y: hidden;
+  }
+
+  .$(namespace)y-auto {
+    overflow-y: auto;
+  }
+
+  .$(namespace)y-scroll {
+    overflow-y: scroll;
+  }
+
+  .$(namespace)y-visible {
+    overflow-y: visible;
+  }
+}
+
+:root {
+  @mixin utils-overflow-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-overflow-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-overflow-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-overflow-setup desk-;
+  }
+}

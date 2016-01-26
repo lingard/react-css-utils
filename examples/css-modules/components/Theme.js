@@ -20,6 +20,10 @@ const THEMES = {
     borderColor: {
       ...defaultTheme.borderColor,
       ...darkTheme.borderColor,
+    },
+    fill: {
+      ...defaultTheme.fill,
+      ...darkTheme.fill,
     }
   }
 };

@@ -1,0 +1,22 @@
+.base {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.small {
+  size: 1vr;
+}
+
+.medium {
+  size: 2vr;
+}
+
+.large {
+  size: 3vr;
+}
+

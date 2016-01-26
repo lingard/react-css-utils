@@ -1,0 +1,33 @@
+@define-mixin theme-default-fill-setup $namespace {
+  .$(namespace)inherit,
+  .$(namespace)inherit svg {
+    fill: inherit !important;
+  }
+
+  .$(namespace)base,
+  .$(namespace)base svg {
+    fill: var(--fillBase);
+  }
+}
+
+:root {
+  @mixin theme-default-fill-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin theme-default-fill-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin theme-default-fill-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin theme-default-fill-setup desk-;
+  }
+}

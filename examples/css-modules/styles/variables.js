@@ -52,7 +52,7 @@ var defaultTheme = {
   colorTextInfo: 'blue',
 
   // background
-  backgroundBase: '#efefef',
+  backgroundBase: '#f5f7fa',
   backgroundEmphasized: '#161d2a',
   backgroundMuted: '#fff',
   backgroundAccent: '#ffff00',
@@ -60,7 +60,10 @@ var defaultTheme = {
   backgroundBrandDark: '#42a660',
 
   // border color
-  borderColorBase: '#d5dbe5'
+  borderColorBase: '#d5dbe5',
+
+  // fill color
+  fillBase: '#bfbfbf'
 }
 
 // dark theme
@@ -68,7 +71,7 @@ var darkTheme = {
   // color
   darkColorTextBase: '#fff',
   darkColorTextEmphasized: '#fff',
-  darkColorTextMuted: 'rgba(0, 0, 0, 0.75)',
+  darkColorTextMuted: 'rgba(255, 255, 255, 0.75)',
 
   // background
   darkBackgroundBase: '#161d2a',
@@ -76,8 +79,10 @@ var darkTheme = {
   darkBackgroundMuted: '#fff',
 
   // border color
-  darkBorderColorBase: '#1a1a1a'
+  darkBorderColorBase: '#1a1a1a',
 
+  // fill color
+  darkFillBase: '#fff'
 };
 
 module.exports = {

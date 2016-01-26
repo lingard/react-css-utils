@@ -19,6 +19,7 @@ export default class Email extends Component {
         padding='a-m'
         fontSize='small'
         border={['solid', 'b-s']}
+        background='base'
         borderColor={['base']}>
 
         <View margin='r-m'>

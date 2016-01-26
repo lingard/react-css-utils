@@ -1,0 +1,33 @@
+@define-mixin theme-dark-fill-setup $namespace {
+  .$(namespace)inherit,
+  .$(namespace)inherit svg {
+    fill: inherit !important;
+  }
+
+  .$(namespace)base,
+  .$(namespace)base svg {
+    fill: var(--darkFillBase);
+  }
+}
+
+:root {
+  @mixin theme-dark-fill-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin theme-dark-fill-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin theme-dark-fill-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin theme-dark-fill-setup desk-;
+  }
+}

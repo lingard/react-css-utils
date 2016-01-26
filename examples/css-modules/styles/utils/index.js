@@ -13,3 +13,4 @@ export position from './position.css';
 export text from './text.css';
 export textAlign from './textAlign.css';
 export size from './size.css';
+export overflow from './overflow.css';

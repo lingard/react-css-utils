@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font: var(--fontSizeBase)/var(--lineHeightBaseRatio) Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: var(--fontSizeBase)/var(--lineHeightBaseRatio) proxima nova, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: var(--colorTextBase);
   background: var(--backgroundBase);
   text-rendering: optimizeLegibility; /* Enable ligatures and kerning */

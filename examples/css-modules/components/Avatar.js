@@ -13,7 +13,7 @@ export default class Text extends Component {
   };
 
   static defaultProps = {
-    imageUrl: 'http://placehold.it/32x32',
+    imageUrl: 'http://api.adorable.io/avatars/278/abott@adorable.io.png',
     size: 'medium'
   };
 

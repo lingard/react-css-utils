@@ -1,0 +1,8 @@
+.base {
+  transition: color 0.3s var(--easingBase);
+  cursor: pointer;
+  
+  &:hover {
+    color: #fff;
+  }
+}
