@@ -1,0 +1,17 @@
+.base {
+  border-radius: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.small {
+  size: 1vr;
+}
+
+.medium {
+  size: 2vr;
+}
+
+.large {
+  size: 3.5vr;
+}

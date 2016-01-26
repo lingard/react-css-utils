@@ -156,7 +156,6 @@ export default function connect(supports = {}, defaults = {}, options = {}) {
 
     if (process.env.NODE_ENV !== 'production') {
       Connect.prototype.componentWillUpdate = function componentWillUpdate() {
-        console.log(this.version);
         if (this.version === version) {
           return;
         }

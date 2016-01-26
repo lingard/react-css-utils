@@ -42,7 +42,7 @@ var borderRadius = {
 
 var defaultTheme = {
   // color
-  colorTextBase: '#151515',
+  colorTextBase: '#161d2a',
   colorTextEmphasized: '#111',
   colorTextMuted: '#bfbfbf',
   colorTextAccent: 'green',
@@ -60,7 +60,7 @@ var defaultTheme = {
   backgroundBrandDark: '#42a660',
 
   // border color
-  borderColorBase: '#cccccc'
+  borderColorBase: '#d5dbe5'
 }
 
 // dark theme
@@ -72,7 +72,7 @@ var darkTheme = {
 
   // background
   darkBackgroundBase: '#161d2a',
-  darkBackgroundEmphasized: '#131314',
+  darkBackgroundEmphasized: '#0d121a',
   darkBackgroundMuted: '#fff',
 
   // border color

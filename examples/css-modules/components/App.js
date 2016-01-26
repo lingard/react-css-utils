@@ -4,6 +4,32 @@ import View from './View';
 import Text from './Text';
 
 import Sidebar from './Sidebar';
+import EmailList from './email-list';
+
+// import emails from '../data/emails';
+// 
+const emails = [
+  {
+    id: 1,
+    title: 'Purus Adipiscing Consectetur Egestas',
+    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
+    actor: {
+      name: 'John Doe',
+      email: 'john@doe.com',
+      imageUrl: 'http://placehold.it/32x32'
+    }
+  },
+  {
+    id: 2,
+    title: 'Purus Adipiscing Consectetur Egestas',
+    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
+    actor: {
+      name: 'John Doe',
+      email: 'john@doe.com',
+      imageUrl: 'http://placehold.it/32x32'
+    }
+  }
+];
 
 export default class App extends Component {
   render() {
@@ -30,61 +56,8 @@ export default class App extends Component {
                 <Text fontSize='small'>Inbox</Text>
               </View>
 
-              <View 
-                padding='a-m'
-                border={['solid', 'b-s']}
-                borderColor={['base']}>
+              <EmailList emails={emails} />
 
-                <View display='flex' flex={['justify-between']}>
-                  <Text>John Doe</Text>
-                  <Text>10 minutes ago</Text>
-                </View>
-
-                <Text fontWeight='bold'>Hello there</Text>
-                <Text>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</Text>
-              </View>
-
-              <View 
-                padding='a-m'
-                border={['solid', 'b-s']}
-                borderColor={['base']}>
-
-                <View display='flex' flex={['justify-between']}>
-                  <Text>John Doe</Text>
-                  <Text>10 minutes ago</Text>
-                </View>
-
-                <Text fontWeight='bold'>Hello there</Text>
-                <Text>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</Text>
-              </View>
-
-              <View 
-                padding='a-m'
-                border={['solid', 'b-s']}
-                borderColor={['base']}>
-
-                <View display='flex' flex={['justify-between']}>
-                  <Text>John Doe</Text>
-                  <Text>10 minutes ago</Text>
-                </View>
-
-                <Text fontWeight='bold'>Hello there</Text>
-                <Text>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</Text>
-              </View>
-
-              <View 
-                padding='a-m'
-                border={['solid', 'b-s']}
-                borderColor={['base']}>
-
-                <View display='flex' flex={['justify-between']}>
-                  <Text>John Doe</Text>
-                  <Text>10 minutes ago</Text>
-                </View>
-
-                <Text fontWeight='bold'>Hello there</Text>
-                <Text>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</Text>
-              </View>
             </View>
 
             <View 
