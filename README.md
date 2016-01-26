@@ -1,5 +1,5 @@
 # React css utils
-Makes usage of global css utilities easier while using react. Preferably used with css modules.
+Simplifies usage of global css utilities easier while using react. Preferably used with css modules.
 
 *At the moment the implementation and the API is heavily inspired/stolen by react-redux, this will change as soon as there is a more clear vision on what this library is supposed to do.*
 
