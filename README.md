@@ -3,6 +3,10 @@ Simplifies usage of global css utilities while using react. Preferably used with
 
 *At the moment the implementation and the API is heavily inspired/stolen from react-redux, this will change as soon as there is a more clear vision on what this library is supposed to do.*
 
+## Example
+
+Check the [example](https://github.com/lingard/react-css-utils/tree/master/examples/css-modules).
+
 ## Usage
 
 Create an object that represents the different utils that you want to provide to the
