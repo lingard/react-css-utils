@@ -1,4 +1,4 @@
-import { Component, PropTypes, createElement } from 'react';
+import {Component, PropTypes, createElement} from 'react';
 import invariant from 'invariant';
 import hoistStatics from 'hoist-non-react-statics';
 import R from 'ramda';
@@ -20,8 +20,18 @@ const mergeDefaultsWithProps = (props, defaults) => ({
  */
 const shallowPickUtilsFromProps = (props, utils) => R.pick(R.keys(utils), props);
 
+/**
+ * TODO: Remove this and create better functions that are not depending on ramda
+ *       as we don't want it as an dependency and we're not using it in the
+ *       proper way anyway...
+ */
 const getClassNamesFromPropType = R.curry((utils, propType, values) => {
-  return R.values(R.pick(values, R.prop(propType, utils)));
+  const util = R.prop(propType, utils);
+
+  if(R.is(String, util))
+    return [util];
+
+  return R.values(R.pick(values, util));
 });
 
 const computeUtilsClassNames = utils => R.compose(
