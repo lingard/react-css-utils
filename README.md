@@ -28,7 +28,7 @@ it will behave differently.
 
     /**
      * When passing an object the value will be used as the class name and the
-     * key will be used to identify the util. This is mainly used while using
+     * key will be used to identify the util. This is mainly used when using
      * css modules as each class name will have an unique identifier.
      */
     fontSizes: {
