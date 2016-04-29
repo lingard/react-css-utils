@@ -8,110 +8,28 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import EmailList from './email-list';
 
-// import emails from '../data/emails';
-// 
-const emails = [
-  {
-    id: 1,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/abott@adorable.io.png'
-    }
-  },
-  {
-    id: 2,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/a@adorable.io.png'
-    }
-  },
-  {
-    id: 3,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/efef@adorable.io.png'
-    }
-  },
-  {
-    id: 4,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/ads@adorable.io.png'
-    }
-  },
-  {
-    id: 5,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/gr@adorable.io.png'
-    }
-  },
-  {
-    id: 6,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/bt@adorable.io.png'
-    }
-  },
-  {
-    id: 7,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/ref@adorable.io.png'
-    }
-  },
-  {
-    id: 8,
-    title: 'Purus Adipiscing Consectetur Egestas',
-    message: `Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.`,
-    actor: {
-      name: 'John Doe',
-      email: 'john@doe.com',
-      imageUrl: 'http://api.adorable.io/avatars/278/ggre@adorable.io.png'
-    }
-  }
-];
+import emails from '../data/emails';
 
 export default class App extends Component {
   render() {
     return (
       <View size='fill' display='flex' overflow='hidden'>
+
         <Sidebar />
+
         <View size='fill'>
-          <View 
+          <View
             display='flex'
             size='fill'>
-           
+
             <View
               display='flex'
               flex={['col']}
-              size='width-1-of-3' 
+              size='width-2-of-5'
               background='muted'>
 
-              <Navbar 
+              <Navbar
                 display='flex'
-                flex={['justify-between', 'align-items-center']}
                 padding='x-xs'
                 border={['solid', 'b-s']}
                 borderColor={['base']}>
@@ -121,11 +39,11 @@ export default class App extends Component {
                 </View>
 
                 <Text fontSize='small'>Inbox</Text>
-              
+
                 <View>
                   <IconButton name='MdSearch' />
                 </View>
-              
+
               </Navbar>
 
               <View flex={['grow-1']} overflow={['x-hidden', 'y-scroll']} >
@@ -137,14 +55,13 @@ export default class App extends Component {
             <View
               display='flex'
               flex={['col']}
-              size='width-2-of-3' 
+              size='width-3-of-5'
               background='muted'
               border={['solid', 'l-s']}
               borderColor={['base']}>
 
-              <Navbar 
+              <Navbar
                 display='flex'
-                flex={['justify-between']}
                 padding={['x-s']}
                 border={['solid', 'b-s']}
                 borderColor={['base']}>

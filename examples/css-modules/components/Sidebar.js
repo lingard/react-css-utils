@@ -14,17 +14,16 @@ export default class Sidebar extends Component {
   render() {
     return (
       <Theme theme='dark'>
-        <View 
+        <View
           className={styles.base}
           display='flex'
-          flex={['col', 'justify-between', 'no-shrink']} 
+          flex={['col', 'justify-between', 'no-shrink']}
           background='base'>
 
           <View>
-            
+
             <Navbar
               display='flex'
-              flex={['align-items-center', 'justify-between']}
               padding={['l-m', 'r-s']}
               background='brand-dark'>
 
@@ -33,7 +32,7 @@ export default class Sidebar extends Component {
               <View>
                 <IconButton name='MdSettings' />
               </View>
-              
+
             </Navbar>
 
             <View padding='a-l'>
@@ -43,9 +42,9 @@ export default class Sidebar extends Component {
                   display='flex'
                   flex={['justify-between', 'align-items-end']}
                   margin='b-xs'>
-                  
+
                   <Link fontSize='medium'>Inbox</Link>
-                  
+
                   <Text fontSize='xsmall'>32</Text>
 
                 </View>

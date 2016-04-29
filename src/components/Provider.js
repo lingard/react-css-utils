@@ -1,20 +1,8 @@
-import { Component, PropTypes, Children } from 'react';
-
-let didWarnAboutReceivingStore = false
-function warnAboutReceivingStore() {
-  if (didWarnAboutReceivingStore) {
-    return;
-  }
-
-  didWarnAboutReceivingStore = true
-  console.error( // eslint-disable-line no-console
-    '<Provider> does not support changing `utils` on the fly.'
-  )
-}
+import {Component, PropTypes, Children} from 'react';
 
 class Provider extends Component {
   getChildContext() {
-    return { utils: this.utils };
+    return {utils: this.utils};
   }
 
   constructor(props, context) {
@@ -24,16 +12,13 @@ class Provider extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { utils } = this;
-    const { utils: nextUtils } = nextProps;
+    const {utils} = nextProps;
 
-    if (utils !== nextUtils) {
-      warnAboutReceivingUtils();
-    }
+    this.utils = utils;
   }
 
   render() {
-    let { children } = this.props;
+    let {children} = this.props;
 
     return Children.only(children);
   }
@@ -42,9 +27,10 @@ class Provider extends Component {
 Provider.propTypes = {
   utils: PropTypes.object.isRequired,
   children: PropTypes.element.isRequired
-}
+};
+
 Provider.childContextTypes = {
   utils: PropTypes.object.isRequired
-}
+};
 
 module.exports = Provider;

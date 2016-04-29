@@ -1,12 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import {connect as connectCSSUtils} from 'react-css-utils';
 
-@connectCSSUtils(
-  {
-  },
-  {
-  }
-)
+@connectCSSUtils()
 export default class View extends Component {
 
   static propTypes = {

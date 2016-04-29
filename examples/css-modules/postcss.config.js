@@ -16,11 +16,11 @@ var csswring = require('csswring');
 
 var cssVariables = require('./styles/variables').variables;
 var breakpoints = require('./styles/variables').breakpoints;
-console.log(cssVariables);
+
 module.exports = function postcssConfig() {
   return [
     autoprefixer({
-      browsers: ['last 2 versions', 'IE > 8'] 
+      browsers: ['last 2 versions', 'IE > 8']
     }),
     csswring,
     postcssImport({

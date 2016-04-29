@@ -11,7 +11,14 @@ const mergeDefaultsWithProps = (props, defaults) => ({
   ...props
 });
 
-const pickUtilsFromProps = (props, utils) => R.pick(R.keys(utils), props);
+/**
+ * Picks values of utils from the props that are passed to the component.
+ *
+ * @param  {object} props [description]
+ * @param  {object} utils [description]
+ * @return {object}
+ */
+const shallowPickUtilsFromProps = (props, utils) => R.pick(R.keys(utils), props);
 
 const getClassNamesFromPropType = R.curry((utils, propType, values) => {
   return R.values(R.pick(values, R.prop(propType, utils)));
@@ -30,9 +37,15 @@ function getDisplayName(WrappedComponent) {
 // Helps track hot reloading.
 let nextVersion = 0;
 
-export default function connect(supports = {}, defaults = {}, options = {}) {
+export default function connect(options = {}) {
 
-  const { withRef = false } = options;
+  const {
+    withRef = false,
+    pickUtilsFromProps = shallowPickUtilsFromProps,
+    refName = 'wrappedInstance',
+    utils = {},
+    defaults = {}
+  } = options;
 
   // Helps track hot reloading.
   const version = nextVersion++;
@@ -48,7 +61,15 @@ export default function connect(supports = {}, defaults = {}, options = {}) {
         super(props, context);
 
         this.version = version;
-        this.utils = props.utils || context.utils;
+
+        /**
+         * TODO: this.utils needs to be uptated if props.utils or context.utils
+         *       changes.
+         */
+        this.utils = {
+          ...(props.utils || context.utils),
+          ...utils
+        };
 
         invariant(this.utils,
           `Could not find "utils" in either the context or ` +
@@ -72,7 +93,7 @@ export default function connect(supports = {}, defaults = {}, options = {}) {
 
       updateClassNamesIfNeeded() {
         const nextUtilsProps = pickUtilsFromProps(this.props, this.utils);
-        
+
         if (this.utilsProps && shallowEqual(nextUtilsProps, this.utilsProps)) {
           return false;
         }
@@ -133,7 +154,7 @@ export default function connect(supports = {}, defaults = {}, options = {}) {
         if (withRef) {
           this.renderedElement = createElement(WrappedComponent, {
             ...this.mergedProps,
-            ref: 'wrappedInstance'
+            ref: refName
           });
         } else {
           this.renderedElement = createElement(WrappedComponent,

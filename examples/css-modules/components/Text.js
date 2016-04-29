@@ -1,15 +1,13 @@
 import React, {PropTypes, Component} from 'react';
 import {connect as connectCSSUtils} from 'react-css-utils';
 
-@connectCSSUtils(
-  {
-  },
-  {
+@connectCSSUtils({
+  defaults: {
     fontWeight: 'normal',
     fontSize: 'inherit',
     color: 'base'
   }
-)
+})
 export default class Text extends Component {
 
   static propTypes = {
