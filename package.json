@@ -2,17 +2,16 @@
   "name": "react-css-utils",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "directories": {
     "example": "examples"
   },
-  "main": "./lib/index.js",
   "jsnext:main": "./src/index.js",
   "scripts": {
     "build:lib": "babel src --out-dir lib",
     "build:umd": "webpack src/index.js dist/react-css-utils.js --config webpack.config.development.js",
     "build:umd:min": "webpack src/index.js dist/react-css-utils.min.js --config webpack.config.production.js",
-    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min && node ./prepublish",
     "clean": "rimraf lib dist coverage",
     "lint": "eslint src test",
     "prepublish": "npm run clean && npm run build",
@@ -43,6 +42,7 @@
     "babel-preset-es2015-loose": "^6.1.4",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "es3ify": "^0.2.1",
     "eslint": "^1.7.1",
     "eslint-config-rackt": "1.1.0",
     "eslint-plugin-react": "^3.6.3",
