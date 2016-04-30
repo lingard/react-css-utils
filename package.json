@@ -19,6 +19,10 @@
     "test:watch": "npm test -- --watch",
     "test:cov": "babel-node ./node_modules/isparta/bin/isparta cover ./node_modules/mocha/bin/_mocha -- --recursive"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lingard/react-css-utils.git"
+  },
   "keywords": [
     "react",
     "css",
@@ -33,6 +37,10 @@
   ],
   "author": "Christer Lingard",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lingard/react-css-utils/issues"
+  },
+  "homepage": "https://github.com/lingard/react-css-utils",
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",

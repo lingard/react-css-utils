@@ -15,6 +15,7 @@ be an `Array`, `Object` or a `String`. Depending of the type of value you provid
 it will behave differently.
 
 ```css
+
   {
     /**
      * Passing a string as the util value will make the util behave as a boolean.
@@ -36,6 +37,7 @@ it will behave differently.
       large: 'fontSize_large_1D5ji'
     }
   }
+
 ```
 
 Here's an example with CSS modules enabled.

@@ -1,6 +1,6 @@
 {
   "name": "react-css-utils-example",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ReactCSSUtils css-modules example",
   "scripts": {
     "start": "node server.js",
